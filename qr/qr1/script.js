@@ -67,7 +67,7 @@ function init() {
   add.className = 'qr-add';
   add.textContent = '添加二维码生成器';
   add.addEventListener('click', () => {
-    content.insertBefore(createQR('https://github.com/tfpcut3793/www/blob/master/README.md?s#1'), add)
+    content.insertBefore(createQR('https://github.com/ilqkgo3395/www/blob/master/README.md?g#1'), add)
   });
   let share = document.querySelector('button.qr-share');
   share.addEventListener('click', (e) => {
@@ -79,7 +79,7 @@ function init() {
     setTimeout(() => e.target.textContent = origin, 3000);
   });
   content.appendChild(add);
-  let localQr = JSON.parse(localStorage.getItem('_local_qr_codes_') || '["https://github.com/tfpcut3793/www/blob/master/README.md?s#1"]');
+  let localQr = JSON.parse(localStorage.getItem('_local_qr_codes_') || '["https://github.com/ilqkgo3395/www/blob/master/README.md?g#1"]');
   let queryQr = parseQrFromQuery();
   localQr.forEach(chl => content.insertBefore(createQR(chl), add));
   if (queryQr) {
